@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+	<!-- import IBM Plex typeface -->
+	<link rel="stylesheet" href="../node_modules/@ibm/plex/css/ibm-plex.min.css">
+	<link rel="stylesheet" href="%sveltekit.assets%/var.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	%sveltekit.head%
+
+	<style>
+		body {
+			background-color: var(--light-background);
+			font-family: var(--font-sans);
+			margin: auto;
+			width: 60vw;
+		}
+
+		h1,
+		h2,
+		h3 {
+			font-family: var(--font-serif);
+		}
+
+		@media (max-width: 1280px) {}
+
+		@media (max-width: 1024px) {
+			body {
+				width: 80vw;
+			}
+		}
+
+		@media (max-width: 767px) {
+
+			/* CSS */
+
+		}
+
+		@media (max-width: 480px) {
+
+			body {
+				width: 90vw;
+			}
+
+		}
+
+		@media (prefers-color-scheme: dark) {
+			body {
+				color: white;
+				background-color: var(--dark-background);
+			}
+
+			a {
+				color: var(--light-background);
+			}
+		}
+	</style>
+</head>
+
+<body data-sveltekit-preload-data="hover">
+	<div style="display: contents">%sveltekit.body%</div>
+</body>
+
+</html>
