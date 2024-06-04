@@ -1,9 +1,5 @@
-<script>
-    import NavButton from "./NavButton.svelte";
-</script>
-
 <div>
-    <h1 class="text-4xl mb-6">hey there, i'm yiheng</h1>
+    <!-- <h1 class="text-4xl mb-6">hey there, i'm yiheng</h1> -->
     <p class="mb-3">
         Ducimus quia quia eum. Illum odio et rerum ab et. Accusamus maxime quasi
         dolorem. A voluptates dolor aut qui facere ullam. Qui doloribus
@@ -28,13 +24,6 @@
         similique. Officia voluptate id at quo. Ex omnis ut ea. Expedita quo
         sint sit quaerat.
     </p>
-
-    <!-- <div>
-        <NavButton text={"about"} />
-        <NavButton text={"now"} />
-        <NavButton text={"photos"} />
-        <NavButton text={"uses"} />
-    </div> -->
 </div>
 
 <style>

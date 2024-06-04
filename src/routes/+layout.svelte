@@ -1,9 +1,10 @@
 <script>
     import "../app.css";
-    import NavButton from "./NavButton.svelte";
+    import NavButton from "/src/NavButton.svelte";
+    import Heading from "../Heading.svelte";
 </script>
 
-<nav class="w-3/5 mx-auto mb-12">
+<nav class="w-3/5 mx-auto mb-20">
     <!-- logo -->
     <svg
         class="mx-auto mt-6 mb-7"
@@ -23,14 +24,15 @@
     </svg>
 
     <div class="flex flex-wrap gap-3">
-        <NavButton text={"about"} />
-        <NavButton text={"about"} />
-        <NavButton text={"about"} />
-        <NavButton text={"about"} />
+        <NavButton label={"about"} />
+        <NavButton label={"about"} />
+        <NavButton label={"about"} />
+        <NavButton label={"about"} />
     </div>
 </nav>
 
 <main>
+    <Heading content={"hey there, i'm yiheng"} />
     <slot />
 </main>
 

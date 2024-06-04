@@ -1,8 +1,8 @@
 <script>
-    export let text;
+    export let label;
 </script>
 
-<button>{text}</button>
+<button>{label}</button>
 
 <style>
     button {
