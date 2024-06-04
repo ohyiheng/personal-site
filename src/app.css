@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: Gloock;
+    src: url(./Gloock-Regular.ttf);
+}
+
+* {
+    --background: #ddd0c7;
+    --primary: #332c27;
+    --accent: #58724f;
+    --neutral: white;
+    --font-sans: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: Gloock, Georgia, 'Times New Roman', Times, serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    * {
+        --background: #332c27;
+        --primary: #ddd0c7;
+        --neutral: black;
+    }
+}

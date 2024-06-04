@@ -3,23 +3,39 @@
 </script>
 
 <div>
-    <logo>yiheng</logo>
-    <p>
-        Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
+    <h1 class="text-4xl mb-6">hey there, i'm yiheng</h1>
+    <p class="mb-3">
+        Ducimus quia quia eum. Illum odio et rerum ab et. Accusamus maxime quasi
+        dolorem. A voluptates dolor aut qui facere ullam. Qui doloribus
+        voluptatem odio consectetur exercitationem. Est voluptas dolorem a
+        soluta.
+    </p>
+    <p class="mb-3">
+        Vitae amet sed porro tempore eum debitis repellat doloribus. Sit fugit
+        impedit deleniti laboriosam in quae velit. Placeat fugiat qui dicta
+        mollitia modi corporis molestiae ea. Aliquam sunt sunt aliquam est.
+        Corporis nulla adipisci iste cumque reiciendis.
+    </p>
+    <p class="mb-3">
+        Consequatur illum sint voluptatum commodi. Sunt corrupti corporis ipsam
+        occaecati nesciunt molestiae. Alias adipisci quibusdam enim
+        exercitationem enim vel laborum. Accusantium vero ut et occaecati dicta
+        quasi minima. Quis architecto eum velit molestiae vel. Qui sit et quia
+        illum esse quibusdam.
+    </p>
+    <p class="mb-12">
+        Assumenda enim distinctio dignissimos sed asperiores doloremque adipisci
+        similique. Officia voluptate id at quo. Ex omnis ut ea. Expedita quo
+        sint sit quaerat.
     </p>
 
-    <NavButton text={"now"} />
+    <!-- <div>
+        <NavButton text={"about"} />
+        <NavButton text={"now"} />
+        <NavButton text={"photos"} />
+        <NavButton text={"uses"} />
+    </div> -->
 </div>
 
 <style>
-    logo {
-        font-family: var(--font-serif);
-    }
-    div {
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        justify-content: center;
-        align-items: left;
-    }
 </style>
