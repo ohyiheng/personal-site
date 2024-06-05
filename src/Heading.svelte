@@ -1,14 +1,13 @@
 <script>
-    export let content;
+    export let title;
 </script>
 
-<div class="w-4/5 flex justify-center items-center -rotate-2 mx-auto mb-12">
-    <h1 class="text-5xl text-white text-center rotate-2">{content}</h1>
+<div
+    class="px-10 h-24 inline-flex justify-center items-center bg-secondary-500 mb-12 -rotate-1 shadow-md shadow-primary-800/30 dark:shadow-gray-900"
+>
+    <h1
+        class="text-3xl sm:text-4xl lg:text-5xl text-center text-primary-100 rotate-1"
+    >
+        {title}
+    </h1>
 </div>
-
-<style>
-    div {
-        background-color: var(--accent);
-        height: 100px;
-    }
-</style>
