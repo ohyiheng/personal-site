@@ -17,7 +17,7 @@
     >
         <path
             d="M4.72093 0V26M1 40H41V0"
-            style="stroke: var(--primary)"
+                class="stroke-primary-900 dark:stroke-primary-300"
             stroke-width="8"
         />
         <path d="M1 55L45 55" stroke="#748C6C" stroke-width="8" />

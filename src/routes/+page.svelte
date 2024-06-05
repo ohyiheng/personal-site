@@ -64,6 +64,3 @@
         sint sit quaerat.
     </p>
 </div>
-
-<style>
-</style>

@@ -9,27 +9,9 @@
 	<link rel="stylesheet" href="/src/app.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	%sveltekit.head%
-
-	<style>
-		body {
-			color: var(--primary);
-			font-family: var(--font-sans);
-		}
-
-		h1,
-		h2,
-		h3 {
-			font-family: var(--font-serif);
-			margin: .25rem 0;
-		}
-
-		a {
-			color: var(--primary);
-		}
-	</style>
 </head>
 
-<body data-sveltekit-preload-data="hover" class="bg-primary-400 dark:bg-primary-900 text-center">
+<body data-sveltekit-preload-data="hover" class="font-sans text-primary-900 bg-primary-400 dark:bg-primary-900 dark:text-primary-400 text-center">
 	<div style="display: contents">%sveltekit.body%</div>
 </body>
 

@@ -1,28 +1,9 @@
 <script>
-    export let label;
+    export let label, link;
 </script>
 
-<button>{label}</button>
-
-<style>
-    button {
-        padding: 0.65em 1em;
-        min-width: 8rem;
-        color: var(--text-invert);
-        background-color: var(--primary);
-        border: none;
-        border-radius: 0.1rem;
-        font-size: 1rem;
-        font-family: var(--font-sans);
-        font-weight: 500;
-        flex: 1;
-    }
-
-    button:hover {
-        background-color: var(--accent);
-        color: var(--text-white);
-        cursor: pointer;
-        transform: translateY(-4px);
-        transition: transform 150ms ease-in-out;
-    }
-</style>
+<a
+    href={link}
+    class="font-medium text-primary-800 bg-primary-500 dark:text-primary-300 dark:bg-primary-800 hover:text-primary-300 hover:bg-secondary-500 py-[0.65rem] px-4 rounded-sm flex-1 hover:cursor-pointer hover:-translate-y-1 transition-transform ease-in-out"
+    >{label}</a
+>
