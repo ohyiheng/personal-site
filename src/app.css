@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: Gloock;
-    src: url(./Gloock-Regular.ttf);
+    src: url(/Gloock-Regular.ttf);
 }
 
 * {
