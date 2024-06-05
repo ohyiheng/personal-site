@@ -7,14 +7,8 @@
 
 <nav class="w-11/12 mx-auto mb-8 md:w-4/5 xl:w-3/5">
     <!-- logo -->
-    <svg
-        class="mx-auto mt-6 mb-7"
-        width="45"
-        height="59"
-        viewBox="0 0 45 59"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-    >
+    <a href="/" class="w-9 h-auto inline-block mx-auto mt-6 mb-5">
+        <svg viewBox="0 0 45 59" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
             d="M4.72093 0V26M1 40H41V0"
                 class="stroke-primary-900 dark:stroke-primary-300"
@@ -23,6 +17,7 @@
         <path d="M1 55L45 55" stroke="#748C6C" stroke-width="8" />
         <path d="M23 0L23 17" stroke="#748C6C" stroke-width="8" />
     </svg>
+    </a>
 
     <div class="flex flex-wrap gap-3">
         <NavButton label={"about"} />
