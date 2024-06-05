@@ -5,7 +5,7 @@
     import { title } from "../stores.js";
 </script>
 
-<nav class="w-3/5 mx-auto mb-20">
+<nav class="w-11/12 mx-auto mb-8 md:w-4/5 xl:w-3/5">
     <!-- logo -->
     <svg
         class="mx-auto mt-6 mb-7"
@@ -41,7 +41,6 @@
 
 <style>
     main {
-        margin: auto;
         width: 80ch;
     }
 
