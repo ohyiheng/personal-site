@@ -2,6 +2,7 @@
     import "../app.css";
     import NavButton from "/src/NavButton.svelte";
     import Heading from "../Heading.svelte";
+    import { title } from "../stores.js";
 </script>
 
 <nav class="w-3/5 mx-auto mb-20">
@@ -31,8 +32,10 @@
     </div>
 </nav>
 
-<main>
-    <Heading content={"hey there, i'm yiheng"} />
+<hr class="bg-primary-900 dark:bg-primary-400 mb-12 opacity-50" />
+
+<Heading title={$title} />
+<main class="mx-auto">
     <slot />
 </main>
 
