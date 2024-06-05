@@ -32,7 +32,7 @@
     </div>
 </nav>
 
-<hr class="bg-primary-900 dark:bg-primary-400 mb-12 opacity-50" />
+<hr class="border-primary-900 dark:border-primary-600 mb-12 opacity-50" />
 
 <Heading title={$title} />
 <main class="mx-auto">
