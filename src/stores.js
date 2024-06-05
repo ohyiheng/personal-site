@@ -1,3 +1,3 @@
 import { writable } from "svelte/store";
 
-export const title = writable(0);
+export const title = writable("Untitled");
