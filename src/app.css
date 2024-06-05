@@ -11,7 +11,9 @@
     --background: #ddd0c7;
     --primary: #332c27;
     --accent: #58724f;
-    --neutral: white;
+    --text-white: white;
+    --text-primary: #332c27;
+    --text-invert: white;
     --font-sans: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
     --font-serif: Gloock, Georgia, 'Times New Roman', Times, serif;
 }
@@ -20,6 +22,7 @@
     * {
         --background: #332c27;
         --primary: #ddd0c7;
-        --neutral: black;
+        --text-primary: #ddd0c7;
+        --text-invert: #332c27;
     }
 }
