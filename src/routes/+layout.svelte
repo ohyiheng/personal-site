@@ -6,7 +6,7 @@
     import { title } from "../stores.js";
 </script>
 
-<nav class="w-11/12 mx-auto mb-8 md:w-4/5 xl:w-3/5">
+<nav class="text-center w-11/12 mx-auto mb-8 md:w-4/5 xl:w-3/5">
     <!-- logo -->
     <a href="/" class="w-36 h-auto inline-block mx-auto mt-6 mb-5">
         <Logo />
@@ -22,7 +22,9 @@
 
 <hr class="border-primary-900 dark:border-primary-600 mb-12 opacity-50" />
 
-<Heading title={$title} />
+<div class="text-center">
+    <Title title={$title} />
+</div>
 <main class="mx-auto">
     <slot />
 </main>
