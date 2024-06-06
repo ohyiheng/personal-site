@@ -45,7 +45,8 @@ export default {
     },
     fontFamily: {
       'sans': ['IBM Plex Sans', 'ui-sans-serif', 'system-ui', 'sans-serif', "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
-      'serif': ['Gloock', 'ui-serif', 'Georgia', 'Cambria', "Times New Roman", 'Times', 'serif']
+      'serif': ['Gloock', 'ui-serif', 'Georgia', 'Cambria', "Times New Roman", 'Times', 'serif'],
+      'display': ['Red Hat Display', 'ui-sans-serif', 'system-ui', 'sans-serif', "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"]
     }
   },
   plugins: [],

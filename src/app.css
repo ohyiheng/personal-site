@@ -6,3 +6,8 @@
     font-family: Gloock;
     src: url(/Gloock-Regular.ttf);
 }
+
+@font-face {
+    font-family: 'Red Hat Display';
+    src: url(/RedHatDisplay[wght].woff2);
+}
