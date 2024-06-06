@@ -2,7 +2,7 @@
     import "../app.css";
     import Logo from "../Logo.svelte";
     import NavButton from "/src/NavButton.svelte";
-    import Heading from "../Heading.svelte";
+    import Title from "../Title.svelte";
     import { title } from "../stores.js";
 </script>
 
