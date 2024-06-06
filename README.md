@@ -1,38 +1,59 @@
-# create-svelte
+# yiheng's website (WIP)
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+This is a very basic personal website for me created using [Svelte.js](https://svelte.dev/).
 
-## Creating a project
+## Getting Started
 
-If you're seeing this, you've probably already done this step. Congrats!
+These instructions will get you a copy of the project up and running on your local machine.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+### Prerequisites
 
-# create a new project in my-app
-npm create svelte@latest my-app
+- Node.js and npm installed on your local machine. You can download Node.js and npm [here](https://nodejs.org/en/download/).
+
+### Clone the Repository
+
+First, clone the repository to your local machine:
+
+```sh
+git clone https://github.com/rainmrn/personal-site.git
 ```
 
-## Developing
+### Install Dependencies
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Navigate into the cloned repository's directory and install the necessary dependencies:
 
-```bash
+```sh
+cd personal-site
+npm install
+```
+
+### Run the Development Server
+
+Start the development server:
+
+```sh
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+The website should now be running at `http://localhost:5173`, it can also be accessed through `http://<your-ip-addr>:5173` on devices on the same network.
 
-To create a production version of your app:
+If you want to limit connections to only the host machine, remove the `--host` flag in the dev script in the `package.json` file:
+```json
+"scripts": {
+		"dev": "vite dev --host", // remove --host
+		"build": "vite build",
+```
 
-```bash
+### Build the Project
+
+To build the project for production, run:
+
+```sh
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+This will create a `build` directory with the compiled project.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
