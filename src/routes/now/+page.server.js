@@ -23,7 +23,10 @@ export async function load() {
     return {
         myTopAlbums: topAlbums.topalbums.album.map((album) => ({
             name: album.name,
-            artist: album.artist.name
+            artist: album.artist.name,
+            image: album.image[2]['#text'],
+            albumLink: album.url,
+            artistLink: album.artist.url
         }))
     }
 }
