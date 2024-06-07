@@ -31,7 +31,7 @@
 
 <style>
     main {
-        width: 80ch;
+        width: 65ch;
     }
 
     @media (max-width: 1280px) {
