@@ -1,7 +1,8 @@
 <script>
-    import { title } from "../stores.js";
-    title.set("hey there! i'm yiheng");
+    import Title from "../../lib/Title.svelte";
 </script>
+
+<Title title={"hey there! i'm yiheng"} />
 
 <div class="text-left">
     <p class="mb-3">

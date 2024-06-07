@@ -1,9 +1,10 @@
 <script>
-    import { title } from "../../stores.js";
-    title.set("what i'm currently doing");
+    import Title from '$lib/Title.svelte';
 
     export let data;
 </script>
+
+<Title title={"what i'm doing now"} />
 
 <div class="space-y-4 mb-10">
     <p>
