@@ -1,4 +1,4 @@
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -49,6 +49,6 @@ export default {
       'display': ['Red Hat Display', 'ui-sans-serif', 'system-ui', 'sans-serif', "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"]
     }
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 }
 
