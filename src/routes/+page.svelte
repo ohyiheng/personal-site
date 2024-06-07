@@ -1,8 +1,8 @@
 <script>
-    import { title } from "../stores.js";
-    title.set("hey there! i'm yiheng");
+    import Title from "../Title.svelte";
 </script>
 
+<Title title={"hey there! i'm yiheng"} />
 <div class="text-left">
     <p class="mb-3">
         Ducimus quia quia eum. Illum odio et rerum ab et. Accusamus maxime quasi

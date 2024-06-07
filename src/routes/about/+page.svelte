@@ -1,4 +1,5 @@
 <script>
-    import { title } from "../../stores";
-    title.set("about me");
+    import Title from "../../Title.svelte";
 </script>
+
+<Title title={"about me"} />

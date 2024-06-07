@@ -1,6 +1,5 @@
 <script>
-    import { title } from "../../stores.js";
-    title.set("what i'm currently doing");
+    import Title from '../../Title.svelte';
 
     export let data;
 </script>
