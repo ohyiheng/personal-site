@@ -15,16 +15,13 @@
     <div class="flex flex-wrap gap-3">
         <NavButton label={"about"} link={"/about"} />
         <NavButton label={"now"} link={"/now"} />
-        <NavButton label={"photos"} />
+        <NavButton label={"photos"} link={"/photos"} />
         <NavButton label={"uses"} />
     </div>
 </nav>
 
 <hr class="border-primary-900 dark:border-primary-600 mb-12 opacity-50" />
 
-<div class="text-center">
-    <Title title={$title} />
-</div>
 <main class="mx-auto">
     <slot />
 </main>
