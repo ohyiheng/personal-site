@@ -7,31 +7,6 @@
 
 <hr class="border-gray-300 dark:border-gray-700 mb-16" />
 
-<main class="mx-auto">
+<main class="mx-auto w-[90vw] md:w-[65ch]">
     <slot />
 </main>
-
-<style>
-    main {
-        width: 65ch;
-    }
-
-    @media (max-width: 1280px) {
-    }
-
-    @media (max-width: 1024px) {
-        main {
-            width: 80vw;
-        }
-    }
-
-    @media (max-width: 767px) {
-        /* CSS */
-    }
-
-    @media (max-width: 480px) {
-        main {
-            width: 90vw;
-        }
-    }
-</style>
