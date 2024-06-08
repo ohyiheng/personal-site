@@ -4,7 +4,7 @@
 
 <h1>what i'm doing now</h1>
 
-<div class="space-y-4 mb-10">
+<div class="space-y-4 mb-14">
     <p>
         I'm currently on a sembreak, chilling at home. My next semester is going
         to be a lot harder than the first two, as I'm about to dive into
