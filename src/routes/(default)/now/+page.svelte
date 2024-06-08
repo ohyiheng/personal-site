@@ -32,7 +32,7 @@
         <a
             href={albumLink}
             target="_blank"
-            class="px-2 py-3 rounded-sm hover:bg-primary-600/10 dark:hover:bg-primary-400/10"
+            class="px-2 py-3 rounded-sm hover:bg-primary-600/10 dark:hover:bg-primary-100/10"
         >
             <img
                 src={image}
