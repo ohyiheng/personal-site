@@ -1,10 +1,8 @@
 <script>
-    import Title from '$lib/Title.svelte';
-
     export let data;
 </script>
 
-<Title title={"what i'm doing now"} />
+<h1>what i'm doing now</h1>
 
 <div class="space-y-4 mb-10">
     <p>

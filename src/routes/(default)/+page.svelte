@@ -1,8 +1,4 @@
-<script>
-    import Title from "../../lib/Title.svelte";
-</script>
-
-<Title title={"hey there! i'm yiheng"} />
+<h1>hey there! i'm yiheng</h1>
 
 <div class="text-left">
     <p class="mb-3">
