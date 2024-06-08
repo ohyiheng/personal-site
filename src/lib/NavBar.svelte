@@ -9,9 +9,9 @@
     </a>
 
     <div class="flex flex-wrap gap-3">
-        <NavButton label={"about"} link={"/about"} />
-        <NavButton label={"now"} link={"/now"} />
-        <NavButton label={"photos"} link={"/photos"} />
+        <NavButton label={"about"} />
+        <NavButton label={"now"} />
+        <NavButton label={"photos"} />
         <NavButton label={"uses"} />
     </div>
 </nav>

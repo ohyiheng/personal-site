@@ -1,5 +1,6 @@
 <script>
-    export let label, link;
+    export let label;
+    import { page } from '$app/stores';
 </script>
 
 <a
@@ -11,5 +12,12 @@
            flex-1
            hover:cursor-pointer
            active:translate-y-0 hover:-translate-y-[2px] transition-transform ease-in-out"
+    aria-current={$page.url.pathname === `/${label}`}
     >{label}</a
 >
+
+<style>
+    a[aria-current='true'] {
+        @apply text-white bg-secondary-500 dark:bg-secondary-400
+    }
+</style>
