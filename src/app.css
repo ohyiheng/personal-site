@@ -12,6 +12,15 @@
     src: url(/RedHatDisplay[wght].woff2);
 }
 
+body {
+    @apply font-sans
+           md:text-lg
+           text-primary-900
+           bg-gray-50
+           dark:text-primary-100
+           dark:bg-gray-850
+}
+
 h2 {
     @apply text-2xl md:text-3xl font-bold mb-5
 }
