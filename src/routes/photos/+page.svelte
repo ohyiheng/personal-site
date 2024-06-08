@@ -1,5 +1,4 @@
 <script>
-    import Title from "$lib/Title.svelte";
     import { onMount } from "svelte";
 
     onMount(async () => {
