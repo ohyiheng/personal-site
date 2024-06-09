@@ -5,7 +5,7 @@
 
 <a
     href="/{label}"
-    class="font-bold font-display text-primary-800 dark:text-gray-100 hover:text-secondary-500 dark:hover:text-secondary-400
+    class="text-sm sm:text-base md:text-lg font-bold font-display text-primary-800 dark:text-gray-100 hover:text-secondary-500 dark:hover:text-secondary-400
          bg-white border dark:bg-gray-800
          border-gray-300 dark:border-gray-700 hover:border-secondary-500 dark:hover:border-secondary-400 rounded-sm
            py-[0.65rem] px-4
