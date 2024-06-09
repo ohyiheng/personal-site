@@ -5,8 +5,8 @@
 
 <a
     href="/{label}"
-    class="font-medium text-primary-800 dark:text-gray-100 hover:text-secondary-500 dark:hover:text-secondary-400
-         bg-white border dark:bg-gray-900
+    class="font-bold font-display text-primary-800 dark:text-gray-100 hover:text-secondary-500 dark:hover:text-secondary-400
+         bg-white border dark:bg-gray-800
          border-gray-300 dark:border-gray-700 hover:border-secondary-500 dark:hover:border-secondary-400 rounded-sm
            py-[0.65rem] px-4
            flex-1
@@ -18,6 +18,6 @@
 
 <style>
     a[aria-current='true'] {
-        @apply text-white bg-secondary-500 dark:bg-secondary-400
+        @apply text-white bg-secondary-500 dark:bg-secondary-400 dark:text-gray-900
     }
 </style>

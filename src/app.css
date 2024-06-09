@@ -13,12 +13,25 @@
 }
 
 body {
-    @apply font-sans
-           md:text-lg
-           text-primary-900
-           bg-gray-50
-           dark:text-primary-100
-           dark:bg-gray-850
+    @apply font-sans md:text-lg text-primary-900 bg-gray-50 dark:text-primary-100 dark:bg-gray-850
+}
+
+h1::before,
+h2::before,
+h3::before {
+    @apply text-secondary-500 dark:text-secondary-400 text-[0.65em] mr-[0.25em]
+}
+
+h1::before {
+    content: '#'
+}
+
+h2::before {
+    content: '##'
+}
+
+h3::before {
+    content: '###'
 }
 
 h1 {
@@ -35,4 +48,8 @@ h3 {
 
 p a {
     @apply hover:underline text-secondary-500 dark:text-secondary-400
+}
+
+.text-caption {
+    @apply text-sm md:text-base text-gray-650 dark:text-gray-350
 }
