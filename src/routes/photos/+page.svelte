@@ -15,7 +15,7 @@
     });
 </script>
 
-<h1>photos i took</h1>
+<h1 class="mb-20">photos i took</h1>
 
 <div class="grid" id="photos-container">
     <img src="/alcohol.jpg" alt="" />
