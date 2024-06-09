@@ -1,8 +1,8 @@
 export async function load() {
     const lastFMAPIKey = import.meta.env.VITE_LASTFM_API_KEY;
     const lastFMUsername = import.meta.env.VITE_LASTFM_USERNAME;
-    const sanityToken = import.meta.env.VITE_SANITY_TOKEN;
-    const queryURL = import.meta.env.VITE_SANITY_HTTP_QUERY_NOW
+    const cmsToken = import.meta.env.VITE_CMS_TOKEN;
+    const queryURL = import.meta.env.VITE_CMS_HTTP_QUERY_NOW
 
     async function fetchLastFM(method, period) {
         try {
@@ -23,7 +23,7 @@ export async function load() {
         try {
             const response = await fetch(queryURL, {
                 headers: {
-                    'Authorization': `Bearer ${sanityToken}`
+                    'Authorization': `Bearer ${cmsToken}`
                 }
             });
             if (!response.ok) {
