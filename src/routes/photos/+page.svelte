@@ -1,5 +1,13 @@
 <script>
     import { onMount } from "svelte";
+    import PhotoSwipeLightbox from "photoswipe/lightbox";
+    import "photoswipe/style.css";
+
+    const lightbox = new PhotoSwipeLightbox({
+        gallery: "#photos-container",
+        children: "a",
+        pswpModule: () => import("photoswipe"),
+    });
 
     onMount(async () => {
         const Macy = (await import("macy")).default;
@@ -12,6 +20,8 @@
                 768: 2,
             },
         });
+
+        lightbox.init();
     });
 </script>
 
