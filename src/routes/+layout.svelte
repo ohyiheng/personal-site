@@ -5,6 +5,6 @@
 
 <NavBar />
 
-<hr class="border-gray-300 dark:border-gray-700 mb-16" />
+<hr class="border-gray-300 dark:border-gray-700 mb-14" />
 
 <slot />
