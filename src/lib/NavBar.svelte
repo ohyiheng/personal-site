@@ -5,7 +5,7 @@
 
 <div class="bg-white-100 dark:bg-gray-850">
     <nav class="text-center w-11/12 pb-8 mx-auto md:w-4/5 xl:w-3/5">
-        <a href="/" class="w-28 md:w-36 h-auto inline-block mx-auto mt-6 mb-5">
+        <a href="/" class="w-24 sm:w-28 md:w-32 h-auto inline-block mx-auto mt-6 mb-5">
             <Logo />
         </a>
     
