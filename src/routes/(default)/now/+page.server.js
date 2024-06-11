@@ -17,7 +17,10 @@ export async function load(event) {
         }
     }
 
-    const nowUpdateData = await event.locals.sanityClient.fetch("*[_type == 'nowUpdate'] | order(_createdAt desc)[0]");
+    const nowUpdateData = await event.locals.sanityClient
+        .fetch("*[_type == 'nowUpdate'] | order(_createdAt desc)[0]")
+        .catch((err) => { console.log("Fetch now update failed: ", err.message) });
+
     const topAlbumsFetch = await fetchLastFM("user.getTopAlbums", "7day");
 
     return {
