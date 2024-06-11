@@ -6,9 +6,9 @@
 <h1>what i'm doing now</h1>
 
 <div class="space-y-4 mb-14">
-    <PortableText value={data.nowUpdates.content} />
+    <PortableText value={data.nowUpdate.content} />
     <p class="italic text-caption">
-        Last updated: {data.nowUpdates.date}.<br /> This page is inspired by the
+        Last updated: {data.nowUpdate.date}.<br /> This page is inspired by the
         <a href="https://nownownow.com/about" target="_blank"
             >/now page movement</a
         >.

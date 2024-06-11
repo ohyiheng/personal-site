@@ -1,8 +1,6 @@
-export async function load() {
+export async function load(event) {
     const lastFMAPIKey = import.meta.env.VITE_LASTFM_API_KEY;
     const lastFMUsername = import.meta.env.VITE_LASTFM_USERNAME;
-    const cmsToken = import.meta.env.VITE_CMS_TOKEN;
-    const queryURL = import.meta.env.VITE_CMS_HTTP_QUERY_NOW
 
     async function fetchLastFM(method, period) {
         try {
@@ -19,25 +17,8 @@ export async function load() {
         }
     }
 
-    async function fetchNowUpdates() {
-        try {
-            const response = await fetch(queryURL, {
-                headers: {
-                    'Authorization': `Bearer ${cmsToken}`
-                }
-            });
-            if (!response.ok) {
-                throw new Error(`Fetch now updates failed with status: ${response.status}!`);
-            }
-            return await response.json();
-        } catch (err) {
-            console.error(err);
-        }
-    }
-
+    const nowUpdateData = await event.locals.sanityClient.fetch("*[_type == 'nowUpdate'] | order(_createdAt desc)[0]");
     const topAlbumsFetch = await fetchLastFM("user.getTopAlbums", "7day");
-    const nowUpdatesFetch = await fetchNowUpdates();
-    // const topTracks = fetchLastFM("user.getTopTracks", "7day");
 
     return {
         topAlbums: topAlbumsFetch.topalbums.album.map((album) => ({
@@ -47,10 +28,7 @@ export async function load() {
             albumLink: album.url,
             artistLink: album.artist.url
         })),
-        nowUpdates: {
-            date: nowUpdatesFetch.result[0].date,
-            content: nowUpdatesFetch.result[0].updates
-        }
+        nowUpdate: { date: nowUpdateData.date, content: nowUpdateData.updates }
     }
 }
 
