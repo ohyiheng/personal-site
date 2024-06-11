@@ -2,6 +2,7 @@
     import { onMount } from "svelte";
     import PhotoSwipeLightbox from "photoswipe/lightbox";
     import "photoswipe/style.css";
+    export let data;
 
     const lightbox = new PhotoSwipeLightbox({
         gallery: "#photos-container",
@@ -27,23 +28,10 @@
 
 <h1 class="mb-12">photos i took</h1>
 
-<div class="grid" id="photos-container">
-    <img src="/alcohol.jpg" alt="" />
-    <img src="/avocado.jpg" alt="" />
-    <img src="/block.jpg" alt="" />
-    <img src="/mountain.jpg" alt="" />
-    <img src="/plant.jpg" alt="" />
-    <img src="/shake.jpg" alt="" />
-    <img src="/alcohol.jpg" alt="" />
-    <img src="/avocado.jpg" alt="" />
-    <img src="/block.jpg" alt="" />
-    <img src="/mountain.jpg" alt="" />
-    <img src="/plant.jpg" alt="" />
-    <img src="/shake.jpg" alt="" />
-    <img src="/alcohol.jpg" alt="" />
-    <img src="/avocado.jpg" alt="" />
-    <img src="/block.jpg" alt="" />
-    <img src="/mountain.jpg" alt="" />
-    <img src="/plant.jpg" alt="" />
-    <img src="/shake.jpg" alt="" />
+<div id="photos-container">
+    {#each data.photos as { url, width, height }}
+    <a href={url} data-pswp-width={width} data-pswp-height={height}
+        ><img src={url} alt="" />
+    </a>
+    {/each}
 </div>
