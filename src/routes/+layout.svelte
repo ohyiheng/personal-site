@@ -1,10 +1,14 @@
 <script>
     import NavBar from "$lib/NavBar.svelte";
-    import "/src/app.css";
+    import Title from "$lib/Title.svelte";
+    import { page } from "$app/stores";
 </script>
 
-<NavBar />
+<svelte:head>
+    <title>{$page.data.title} | yiheng</title>
+</svelte:head>
+    <NavBar />
 
-<hr class="border-gray-300 dark:border-gray-700 mb-14" />
+    <Title content={$page.data.title} />
 
-<slot />
+    <slot />
