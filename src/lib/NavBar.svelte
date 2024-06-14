@@ -3,6 +3,7 @@
     import LogoError from "$lib/LogoError.svelte";
     import NavButton from "$lib/NavButton.svelte";
     import { page } from "$app/stores";
+    let pages = ['about', 'now', 'projects', 'photos'];
 </script>
 
 <svelte:body class:overflow-hidden={active} />
@@ -16,17 +17,16 @@
     >
         <a href="/" class="w-20 sm:w-24 md:w-28 h-auto inline-block">
             {#if $page.error}
-            <LogoError />
+                <LogoError />
             {:else}
-            <Logo />
+                <Logo />
             {/if}
         </a>
-    
-        <div class="flex flex-wrap gap-3">
-            <NavButton label={"about"} />
-            <NavButton label={"now"} />
-            <NavButton label={"photos"} />
-            <NavButton label={"uses"} />
+
+        <div class="flex gap-3 md:gap-4">
+            {#each pages as page, i}
+            <NavButton label={page} />
+            {/each}
         </div>
     </nav>
 </div>
