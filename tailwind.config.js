@@ -6,17 +6,6 @@ export default {
   theme: {
     extend: {},
     colors: {
-      'primary': {
-        100: "#f7f4f2",
-        200: "#ebe3dd",
-        300: "#e4d9d2",
-        400: "#ddd0c7",
-        500: "#b1a69f",
-        600: "#857d77",
-        700: "#585350",
-        800: "#332c27",
-        900: "#161412"
-      },
       secondary: {
         100: "#d9e2d6",
         200: "#b2c5ac",
@@ -61,7 +50,9 @@ export default {
         850: "#202020",
         900: "#131313",
         950: "#060606",
-      }
+      },
+      red: colors.red,
+      transparent: colors.transparent
     },
     fontFamily: {
       'sans': ['IBM Plex Sans', 'ui-sans-serif', 'system-ui', 'sans-serif', "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
