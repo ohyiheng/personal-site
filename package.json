@@ -21,7 +21,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@ibm/plex": "^6.4.1",
 		"@sanity/client": "^6.19.1",
 		"photoswipe": "^5.4.4"
 	}
