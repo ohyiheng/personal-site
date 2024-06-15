@@ -3,8 +3,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-	<link rel="stylesheet" href="/src/app.css">
+	<link rel="icon" href="%sveltekit.assets%/logo.svg" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	%sveltekit.head%
 </head>
@@ -12,5 +11,19 @@
 <body data-sveltekit-preload-data="hover">
 	<div style="display: contents">%sveltekit.body%</div>
 </body>
+
+<script>
+    function setFavicon() {
+        const favicon = document.querySelector('link[rel="icon"]');
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            favicon.href = "%sveltekit.assets%/logo-dark.svg";
+        } else {
+            favicon.href = "%sveltekit.assets%/logo.svg";
+        }
+    }
+
+    setFavicon();
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setFavicon);
+</script>
 
 </html>
