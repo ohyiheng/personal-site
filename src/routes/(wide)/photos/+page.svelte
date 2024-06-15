@@ -13,7 +13,7 @@
 
     /**
      * Replaces the source URL of an image element with a new image once it finishes loading.
-     * 
+     *
      * @param {HTMLImageElement} oldImage - The image element to replace the source URL of.
      * @param {string} newUrl - The new URL to set as the source of the image element.
      */
@@ -27,7 +27,7 @@
 
     onMount(() => {
         let photos = document.querySelectorAll("img");
-        
+
         Array.from(photos).map((photo) => {
             // Has a dependency on photoswipe's attribute, maybe there's a better way?
             let width = photo.parentElement.getAttribute("data-pswp-width");
@@ -37,15 +37,27 @@
 
             // If portrait
             if (aspectRatio > 1.15) {
-                photo.parentElement.classList.add("row-span-12");
-            } 
+                photo.parentElement.classList.replace(
+                    "row-span-6",
+                    "row-span-12",
+                );
+            }
             // If close to square
             else if (aspectRatio <= 1.15 && aspectRatio >= 0.9) {
-                photo.parentElement.classList.add("row-span-8");
-            } 
-            // If quite a bit wider than standard 3:2 (0.666)
-            else if (aspectRatio <= 0.6) {
-                photo.parentElement.classList.add("row-span-4");
+                photo.parentElement.classList.replace(
+                    "row-span-6",
+                    "row-span-8",
+                );
+            } else if (aspectRatio <= 0.7 && aspectRatio >= 0.5) {
+                photo.parentElement.classList.replace(
+                    "row-span-6",
+                    "row-span-5",
+                );
+            } else if (aspectRatio <= 0.5) {
+                photo.parentElement.classList.replace(
+                    "row-span-6",
+                    "row-span-4",
+                );
             }
         });
 
@@ -53,7 +65,10 @@
     });
 </script>
 
-<div class="grid gap-4 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] auto-rows-[25px] z-10" id="photos-container">
+<div
+    class="grid gap-4 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] auto-rows-[25px] z-10"
+    id="photos-container"
+>
     {#each data.photos as { url, preview, width, height }}
         <a
             href={url}
