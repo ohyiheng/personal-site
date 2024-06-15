@@ -1,11 +1,11 @@
+import { LASTFM_API_KEY, LASTFM_USERNAME } from '$env/static/private';
+
 export async function load(event) {
-    const lastFMAPIKey = import.meta.env.VITE_LASTFM_API_KEY;
-    const lastFMUsername = import.meta.env.VITE_LASTFM_USERNAME;
 
     async function fetchLastFM(method, period, limit) {
         try {
             const response = await fetch(
-                `https://ws.audioscrobbler.com/2.0/?method=${method}&user=${lastFMUsername}&period=${period}&limit=${limit}&api_key=${lastFMAPIKey}&format=json`,
+                `https://ws.audioscrobbler.com/2.0/?method=${method}&user=${LASTFM_USERNAME}&period=${period}&limit=${limit}&api_key=${LASTFM_API_KEY}&format=json`,
             );
             if (!response.ok) {
                 throw new Error(

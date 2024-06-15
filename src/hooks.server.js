@@ -1,14 +1,12 @@
 import { createClient } from "@sanity/client";
-const sanityProjectId = import.meta.env.VITE_SANITY_PROJECT_ID;
-const sanityDataset = import.meta.env.VITE_SANITY_DATASET;
-const sanityToken = import.meta.env.VITE_CMS_TOKEN
+import { SANITY_PROJECT_ID, SANITY_DATASET, SANITY_TOKEN } from '$env/static/private';
 
 const sanity = createClient({
-    projectId: sanityProjectId,
-    dataset: sanityDataset,
+    projectId: SANITY_PROJECT_ID,
+    dataset: SANITY_DATASET,
     useCdn: true,
     apiVersion: '2024-06-10',
-    token: sanityToken
+    token: SANITY_TOKEN
 })
 
 /** @type {import('@sveltejs/kit').Handle} */
