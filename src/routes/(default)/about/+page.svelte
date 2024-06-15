@@ -37,7 +37,7 @@
     <p>
         This site is built with the awesome Javascript framework
         <Link href={"https://kit.svelte.dev"}>Sveltekit</Link>. I used the
-        <Link href={"https://photoswipe.com"}>Photoswipe</Link> lightbox library
+        <Link href={"https://photoswipe.com"}>Photoswipe</Link> library
         for the lightbox gallery feature on my
         <Link href={"/photos"}>photos</Link> page.
     </p>
