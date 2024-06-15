@@ -11,6 +11,12 @@
         pswpModule: () => import("photoswipe"),
     });
 
+    /**
+     * Replaces the source URL of an image element with a new image once it finishes loading.
+     * 
+     * @param {HTMLImageElement} oldImage - The image element to replace the source URL of.
+     * @param {string} newUrl - The new URL to set as the source of the image element.
+     */
     function replaceImg(oldImage, newUrl) {
         let newImage = new Image();
         newImage.src = newUrl;
@@ -20,61 +26,48 @@
     }
 
     onMount(() => {
-        const container = document.querySelector("#photos-container");
-        let nCol = 0;
+        let photos = document.querySelectorAll("img");
+        
+        Array.from(photos).map((photo) => {
+            // Has a dependency on photoswipe's attribute, maybe there's a better way?
+            let width = photo.parentElement.getAttribute("data-pswp-width");
+            let height = photo.parentElement.getAttribute("data-pswp-height");
 
-        function setLayout() {
-            let masonry = {
-                _el: container,
-                gap: parseFloat(getComputedStyle(container).gap),
-                children: Array.from(container.childNodes).filter(
-                    (child) => child.nodeType === 1,
-                ),
-                nCol: getComputedStyle(container).gridTemplateColumns.split(" ")
-                    .length,
-            };
+            let aspectRatio = height / width;
 
-            if (nCol !== masonry.nCol) {
-                nCol = masonry.nCol;
-
-                masonry.children.forEach((child) => {
-                    child.style.removeProperty("margin-top");
-                });
-
-                for (let i = 0; i < masonry.children.length - nCol; i++) {
-                    let top =
-                        masonry.children[i].getBoundingClientRect().bottom;
-                    let bottom =
-                        masonry.children[i + nCol].getBoundingClientRect().top;
-                    let offset = top - bottom + masonry.gap;
-
-                    masonry.children[i + nCol].style.marginTop = `${offset}px`;
-                }
+            // If portrait
+            if (aspectRatio > 1.15) {
+                photo.parentElement.classList.add("row-span-12");
+            } 
+            // If close to square
+            else if (aspectRatio <= 1.15 && aspectRatio >= 0.9) {
+                photo.parentElement.classList.add("row-span-8");
+            } 
+            // If quite a bit wider than standard 3:2 (0.666)
+            else if (aspectRatio <= 0.6) {
+                photo.parentElement.classList.add("row-span-4");
             }
-        }
+        });
 
-        setLayout();
-        window.addEventListener("load", setLayout);
-        window.addEventListener("resize", setLayout);
         lightbox.init();
     });
 </script>
 
-<div class="grid gap-4 z-10" id="photos-container">
+<div class="grid gap-4 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] auto-rows-[25px] z-10" id="photos-container">
     {#each data.photos as { url, preview, width, height }}
         <a
             href={url}
-            class="self-start photo"
+            class="photo overflow-hidden row-span-6"
             data-pswp-width={width}
             data-pswp-height={height}
+            data-cropped="true"
         >
-            <img class="rounded-sm block w-full" src={preview} alt="" use:replaceImg={url} />
+            <img
+                class="rounded-sm block w-full h-full object-cover"
+                src={preview}
+                alt=""
+                use:replaceImg={url}
+            />
         </a>
     {/each}
 </div>
-
-<style>
-    #photos-container {
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    }
-</style>
