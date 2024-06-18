@@ -22,9 +22,6 @@
             <IconMail />
         </a>
     </div>
-    <p class="text-sm">
-        Icons by <Link href={"https://feathericons.com/"}>Feather</Link>
-    </p>
 </div>
 
 <style>
