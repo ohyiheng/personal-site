@@ -1,6 +1,6 @@
 export function load() {
     return {
-        title: "👋 hi there! i'm yiheng"
+        title: "hi there! i'm yiheng"
     }
 }
 
