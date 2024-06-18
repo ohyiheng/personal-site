@@ -1,1 +1,1 @@
-<p>under construction...</p>
+<p>under construction... <br><span class="italic">(which just means i have no projects worthy of putting into public display as of yet)</span></p>
