@@ -26,7 +26,7 @@ export async function load(event) {
 
     return {
         title: "what i'm currently doing",
-        nowUpdate: { date: nowUpdateData.date, content: nowUpdateData.updates },
+        nowUpdate: { date: nowUpdateData.date, content: nowUpdateData.updates, location: nowUpdateData.location },
         topAlbums: topAlbumsData.map(album => ({
             name: album.name,
             url: album.url,
