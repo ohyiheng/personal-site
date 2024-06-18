@@ -3,7 +3,7 @@
     import Title from "$lib/Title.svelte";
     import Footer from "$lib/Footer.svelte";
     import { page } from "$app/stores";
-    import '../app.css';
+    import "../app.css";
 </script>
 
 <svelte:head>
@@ -13,7 +13,7 @@
 <div class="flex flex-col min-h-screen">
     <NavBar />
 
-    <Title content={$page.data.title} />
+    <Title>{$page.data.title}</Title>
 
     <slot />
 
