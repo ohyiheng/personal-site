@@ -8,7 +8,7 @@
 </script>
 
 <div
-    class="text-gray-400 bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 text-center flex justify-center items-center gap-4 py-12"
+    class="text-gray-400 bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-750 text-center flex flex-col sm:flex-row justify-center items-center gap-4 py-12"
 >
     <p>Find me on other places:</p>
     <div class="font-sans text-sm flex items-center justify-center gap-4">
@@ -21,16 +21,10 @@
         >
             <LogoLinkedin />
         </a>
-        <a
-            href="https://www.last.fm/user/rainmrn"
-            target="_blank"
-        >
+        <a href="https://www.last.fm/user/rainmrn" target="_blank">
             <LogoLastFM />
         </a>
-        <a
-            href="https://www.letterboxd.com/rainmrn/"
-            target="_blank"
-        >
+        <a href="https://www.letterboxd.com/rainmrn/" target="_blank">
             <LogoLetterboxd />
         </a>
         <a href="mailto:oh@yhng.me" target="_blank">
