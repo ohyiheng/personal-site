@@ -6,8 +6,9 @@
 </script>
 
 <div
-    class="text-gray-400 bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 text-center flex flex-col gap-4 pt-10 pb-8"
+    class="text-gray-400 bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 text-center flex justify-center items-center gap-4 py-12"
 >
+    <p>Find me on other places:</p>
     <div class="font-sans text-sm flex items-center justify-center gap-4">
         <a href="https://github.com/ohyiheng" target="_blank">
             <LogoGithub />

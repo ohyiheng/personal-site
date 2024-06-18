@@ -43,8 +43,6 @@
     </p>
     <p>
         You can find the source code on my
-        <Link href={"https://github.com/ohyiheng/personal-site"}>
-            github repo
-        </Link>.
+        <Link href={"https://github.com/ohyiheng/personal-site"}>github repo</Link>.
     </p>
 </div>
