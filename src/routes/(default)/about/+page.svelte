@@ -29,8 +29,13 @@
         and have someplace I can call home.
     </p>
     <p>And this is it, this is my webpage, I hope you enjoy your visit.</p>
-    <hr class="border-gray-200 dark:border-gray-700">
-    <p>If you're reading this and you still don't have a website, read <Link href={"https://www.zinzy.website/2023/04/26/dear-nienke-you-should-have-a-website/"}>why you should have one</Link>!</p>
+    <hr class="border-gray-200 dark:border-gray-750" />
+    <p>
+        If you're reading this and you still don't have a website, read <Link
+            href={"https://www.zinzy.website/2023/04/26/dear-nienke-you-should-have-a-website/"}
+            >why you should have one</Link
+        >!
+    </p>
 </div>
 
 <h3>technologies underneath</h3>

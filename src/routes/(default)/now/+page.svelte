@@ -6,7 +6,7 @@
 
 <div class="space-y-4 pb-20">
     <p>📌 <strong>Location:</strong> {data.nowUpdate.location}</p>
-    <hr class="border-gray-200 dark:border-gray-700">
+    <hr class="border-gray-200 dark:border-gray-750" />
     <PortableText value={data.nowUpdate.content} />
     <p class="text-caption">
         Last updated: <span
