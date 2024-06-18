@@ -1,6 +1,8 @@
 <script>
     import LogoGithub from "$lib/LogoGithub.svelte";
     import LogoLinkedin from "$lib/LogoLinkedin.svelte";
+    import LogoLastFM from "$lib/LogoLastFM.svelte";
+    import LogoLetterboxd from "$lib/LogoLetterboxd.svelte";
     import IconMail from "$lib/IconMail.svelte";
     import Link from "$lib/Link.svelte";
 </script>
@@ -18,6 +20,18 @@
             target="_blank"
         >
             <LogoLinkedin />
+        </a>
+        <a
+            href="https://www.last.fm/user/rainmrn"
+            target="_blank"
+        >
+            <LogoLastFM />
+        </a>
+        <a
+            href="https://www.letterboxd.com/rainmrn/"
+            target="_blank"
+        >
+            <LogoLetterboxd />
         </a>
         <a href="mailto:oh@yhng.me" target="_blank">
             <IconMail />
