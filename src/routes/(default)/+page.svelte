@@ -23,7 +23,7 @@
     <a
         href="/now"
         class="dark:bg-gray-900 border rounded px-6 py-4 dark:border-gray-750 hover:border-secondary-500 hover:dark:border-secondary-400 hover:text-secondary-500 hover:dark:text-secondary-400 duration-50"
-        >🤔 what i'm currently doing?</a
+        >🤔 what am i currently doing?</a
     >
     <a
         href="/projects"
