@@ -15,7 +15,7 @@
     <li>can sometimes be overly competitive</li>
     <li>likes journalling but does it on a very inconsistent basis</li>
     <li>enjoys writing but is not very good at it</li>
-    <li>likes designing even though i'm also really bad at drawing</li>
+    <li>likes designing but is very bad at drawing</li>
     <li>enjoys solving Rubik's cubes and puzzles</li>
 </ul>
 <h2 class="pb-2">have a look around</h2>
