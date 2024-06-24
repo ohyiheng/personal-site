@@ -21,12 +21,12 @@
     </p>
 
     <p>
-        At the end of the day, my website is probably just going to
-        go down as a single node that exists in a sea of other interconnected
-        nodes which, form a large network called the World Wide Web, except my
-        node would be barely connected to other nodes, if at all. But I guess
-        I'm fine with that, I just want to have a spot and be a part of the web,
-        and have someplace I can call home.
+        At the end of the day, my website is probably just going to go down as a
+        single node that exists in a sea of other interconnected nodes which,
+        form a large network called the World Wide Web, except my node would be
+        barely connected to other nodes, if at all. But I guess I'm fine with
+        that, I just want to have a spot and be a part of the web, and have
+        someplace I can call home.
     </p>
     <p>And this is it, this is my webpage, I hope you enjoy your visit.</p>
     <hr class="border-gray-200 dark:border-gray-750" />
@@ -44,8 +44,8 @@
     <p>
         This site is built with the awesome Javascript framework
         <Link href={"https://kit.svelte.dev"}>Sveltekit</Link>. I used the
-        <Link href={"https://photoswipe.com"}>Photoswipe</Link> library
-        for the lightbox gallery feature on my
+        <Link href={"https://photoswipe.com"}>Photoswipe</Link> library for the lightbox
+        gallery feature on my
         <Link href={"/photos"}>photos</Link> page.
     </p>
     <p>
