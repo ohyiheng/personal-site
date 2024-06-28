@@ -1,7 +1,3 @@
-<script>
-    export let content;
-</script>
-
 <header
     class="bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-750"
 >
