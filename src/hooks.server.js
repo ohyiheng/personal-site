@@ -13,7 +13,19 @@ const sanity = createClient({
 export async function handle({ event, resolve }) {
     event.locals.sanityClient = sanity;
 
-    const response = await resolve(event);
+    // Check if the request is for the proxied script
+    if (event.url.pathname === '/script.js') {
+        // Fetch the Umami script from its original location
+        const script = await fetch('https://cloud.umami.is/script.js');
+        const scriptContent = await script.text();
 
-    return response;
+        // Return the script content with appropriate content-type
+        return new Response(scriptContent, {
+            headers: {
+                'Content-Type': 'application/javascript',
+            },
+        });
+    }
+
+    return await resolve(event);
 }
