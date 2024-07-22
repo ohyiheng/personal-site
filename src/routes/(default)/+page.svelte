@@ -28,7 +28,7 @@
     <a
         href="/projects"
         class="dark:bg-gray-900 border rounded px-6 py-4 dark:border-gray-750 hover:border-secondary-500 hover:dark:border-secondary-400 hover:text-secondary-500 hover:dark:text-secondary-400 duration-50"
-        >✔️ projects showcase (which is currently empty...)</a
+        >✔️ projects showcase</a
     >
     <a
         href="/photos"
