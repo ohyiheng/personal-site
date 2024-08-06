@@ -22,6 +22,7 @@
 	"type": "module",
 	"dependencies": {
 		"@sanity/client": "^6.19.1",
-		"photoswipe": "^5.4.4"
+		"photoswipe": "^5.4.4",
+		"tippy.js": "^6.3.7"
 	}
 }
