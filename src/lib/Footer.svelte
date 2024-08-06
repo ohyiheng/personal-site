@@ -4,7 +4,6 @@
     import LogoLastFM from "$lib/LogoLastFM.svelte";
     import LogoLetterboxd from "$lib/LogoLetterboxd.svelte";
     import IconMail from "$lib/IconMail.svelte";
-    import Link from "$lib/Link.svelte";
 </script>
 
 <div
@@ -35,6 +34,6 @@
 
 <style>
     a {
-        @apply w-6 hover:text-secondary-500 duration-150;
+        @apply w-6 hover:text-secondary-500;
     }
 </style>

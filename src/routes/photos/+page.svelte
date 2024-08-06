@@ -1,5 +1,7 @@
 <script>
     import { onMount } from "svelte";
+    import Title from "$lib/Title.svelte";
+    import Body from "$lib/Body.svelte";
     import PhotoSwipeLightbox from "photoswipe/lightbox";
     import "photoswipe/style.css";
     export let data;
@@ -65,24 +67,30 @@
     });
 </script>
 
-<div
-    class="grid gap-4 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] auto-rows-[25px] z-10"
-    id="photos-container"
->
-    {#each data.photos as { url, preview, width, height }}
-        <a
-            href={url}
-            class="photo overflow-hidden row-span-6"
-            data-pswp-width={width}
-            data-pswp-height={height}
-            data-cropped="true"
-        >
-            <img
-                class="rounded-sm block w-full h-full object-cover"
-                src={preview}
-                alt=""
-                use:replaceImg={url}
-            />
-        </a>
-    {/each}
-</div>
+<Title>photos
+    <p slot="caption">a collection of pictures i took</p>
+</Title>
+
+<Body width="full">
+    <div
+        class="grid gap-4 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] auto-rows-[25px] z-10"
+        id="photos-container"
+    >
+        {#each data.photos as { url, preview, width, height }}
+            <a
+                href={url}
+                class="photo overflow-hidden row-span-6"
+                data-pswp-width={width}
+                data-pswp-height={height}
+                data-cropped="true"
+            >
+                <img
+                    class="rounded-sm block w-full h-full object-cover"
+                    src={preview}
+                    alt=""
+                    use:replaceImg={url}
+                />
+            </a>
+        {/each}
+    </div>
+</Body>

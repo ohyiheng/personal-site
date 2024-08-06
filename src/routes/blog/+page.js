@@ -1,5 +1,5 @@
 export function load() {
     return {
-        title: "about this site"
+        title: "personal blog"
     }
 }

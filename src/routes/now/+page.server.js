@@ -25,7 +25,6 @@ export async function load(event) {
     const topAlbumsData = await fetchLastFM("user.getTopAlbums", "7day", 6);
 
     return {
-        title: "what i'm currently doing",
         nowUpdate: { date: nowUpdateData.date, content: nowUpdateData.updates, location: nowUpdateData.location },
         topAlbums: topAlbumsData.map(album => ({
             name: album.name,

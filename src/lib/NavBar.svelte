@@ -24,7 +24,7 @@
         </a>
 
         <div class="flex gap-3 md:gap-4">
-            {#each pages as page, i}
+            {#each pages as page}
                 <NavButton label={page} />
             {/each}
         </div>
