@@ -30,7 +30,7 @@
             trigger: "click focus mouseenter",
             interactive: true,
             placement: "top-end",
-            offset: [0, 24],
+            offset: [0, 32],
             duration: [50, 50],
         });
     });
@@ -65,13 +65,13 @@
             id="button"
             class="flex flex-col md:hidden h-4 cursor-pointer place-content-between"
         >
-            <div class="h-0.5 w-6 bg-gray-800"></div>
-            <div class="h-0.5 w-6 bg-gray-800"></div>
-            <div class="h-0.5 w-6 bg-gray-800"></div>
+            <div class="h-0.5 w-6 bg-gray-800 dark:bg-gray-200"></div>
+            <div class="h-0.5 w-6 bg-gray-800 dark:bg-gray-200"></div>
+            <div class="h-0.5 w-6 bg-gray-800 dark:bg-gray-200"></div>
         </button>
         <div id="menu" class="hidden">
             <div
-                class="md:hidden flex flex-col gap-2 bg-white border rounded shadow-md py-6 px-8"
+                class="md:hidden flex flex-col gap-2 bg-white dark:bg-gray-850 border dark:border-gray-750 rounded shadow-md py-6 px-8"
             >
                 {#each pages as page}
                     <NavButton label={page} />
