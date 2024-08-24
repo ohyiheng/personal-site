@@ -8,9 +8,8 @@ export async function load(event) {
                 `https://ws.audioscrobbler.com/2.0/?method=${method}&user=${LASTFM_USERNAME}&period=${period}&limit=${limit}&api_key=${LASTFM_API_KEY}&format=json`,
             );
             if (!response.ok) {
-                throw new Error(
-                    `Fetch last.fm failed with status: ${response.status}!`,
-                );
+                const data = await response.json();
+                throw new Error(`${data.error}: ${data.message}`);
             }
             const data = await response.json();
             return data.topalbums.album;
@@ -23,6 +22,13 @@ export async function load(event) {
         .fetch("*[_type == 'nowUpdate'] | order(_createdAt desc)[0]")
         .catch((err) => { console.log("Fetch now update failed: ", err.message) });
     const topAlbumsData = await fetchLastFM("user.getTopAlbums", "7day", 6);
+
+    if (!nowUpdateData || !topAlbumsData) {
+        return {
+            status: 404,
+            error: new Error("Failed to fetch data!")
+        }
+    }
 
     return {
         nowUpdate: { date: nowUpdateData.date, content: nowUpdateData.updates, location: nowUpdateData.location },
