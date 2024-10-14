@@ -1,5 +1,5 @@
 export async function load(event) {
-    const photosData = await event.locals.sanityClient.fetch("*[_type == 'photo']{ 'url': photo.asset->url, 'preview': photo.asset->metadata.lqip , 'width': photo.asset->metadata.dimensions.width, 'height': photo.asset->metadata.dimensions.height, 'sha1': photo.asset->sha1hash}");
+    const photosData = await event.locals.sanityClient.fetch("*[_type == 'photo' && 'main' in category]{ 'url': photo.asset->url, 'preview': photo.asset->metadata.lqip , 'width': photo.asset->metadata.dimensions.width, 'height': photo.asset->metadata.dimensions.height, 'sha1': photo.asset->sha1hash}");
 
     return {
         photos: photosData.map((photo) => ({

@@ -30,7 +30,7 @@
             </div>
             {:else}
             <div
-                class="text-sm text-gray-600 dark:text-gray-400"
+                class="text-sm text-gray-600 dark:text-gray-400 text-center"
             >
             <slot name="caption" />
             </div>

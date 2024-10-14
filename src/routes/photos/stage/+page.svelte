@@ -10,7 +10,7 @@
      * @param {HTMLImageElement} oldImage - The image element to replace the source URL of.
      * @param {string} newUrl - The new URL to set as the source of the image element.
      */
-     function replaceImg(oldImage, newUrl) {
+    function replaceImg(oldImage, newUrl) {
         let newImage = new Image();
         newImage.src = newUrl;
         newImage.onload = () => {
@@ -19,8 +19,9 @@
     }
 </script>
 
-<Title>photos
-    <p slot="caption">a collection of pictures i took <br> other photos: <Link href="./photos/stage">stage photography</Link> </p>
+<Title
+    >stage photography
+    <p slot="caption">a collection of stage photos i took</p>
 </Title>
 
 <Body width="full" flex>
