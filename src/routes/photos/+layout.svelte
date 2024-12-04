@@ -1,5 +1,6 @@
 <script>
     import { onMount } from "svelte";
+    import { afterNavigate } from "$app/navigation";
     import PhotoSwipeLightbox from "photoswipe/lightbox";
     import "photoswipe/style.css";
 
@@ -10,7 +11,7 @@
         pswpModule: () => import("photoswipe"),
     });
 
-    onMount(() => {
+    function updateGallery() {
         let photos = document.querySelectorAll("img");
 
         Array.from(photos).map((photo) => {
@@ -45,7 +46,15 @@
                 );
             }
         });
+    }
 
+    onMount(() => {
+        updateGallery();
+        lightbox.init();
+    });
+
+    afterNavigate(() => {
+        updateGallery();
         lightbox.init();
     });
 </script>
