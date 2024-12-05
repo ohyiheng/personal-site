@@ -1,6 +1,6 @@
 <script>
-    export let label;
     import { page } from "$app/stores";
+    let { label } = $props();
 </script>
 
 <a

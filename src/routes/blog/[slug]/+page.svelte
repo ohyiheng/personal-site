@@ -1,12 +1,16 @@
 <script>
     import Title from '$lib/Title.svelte';
     import Body from '$lib/Body.svelte';
-    export let data;
+    let { data } = $props();
 </script>
 
 <Title left>{data.title}
-    <p slot="caption">{data.caption}</p>
-    <p slot="date">{data.date}</p>
+    {#snippet caption()}
+        <p >{data.caption}</p>
+    {/snippet}
+    {#snippet date()}
+        <p >{data.date}</p>
+    {/snippet}
 </Title>
 
 <Body width="normal">

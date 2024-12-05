@@ -1,4 +1,7 @@
 <script>
+    import { createBubbler, preventDefault } from 'svelte/legacy';
+
+    const bubble = createBubbler();
     import Title from "$lib/Title.svelte";
     import Body from "$lib/Body.svelte";
 </script>
@@ -11,7 +14,7 @@
             src="/avatar.jpg"
             alt="a headshot of me"
             class="rounded-full h-10"
-            on:contextmenu|preventDefault
+            oncontextmenu={preventDefault(bubble('contextmenu'))}
         />
         <h2 class="m-0">welcome to my website</h2>
     </div>

@@ -2,7 +2,7 @@
     import Title from "$lib/Title.svelte";
     import Body from "$lib/Body.svelte";
     import Link from "$lib/Link.svelte";
-    export let data;
+    let { data } = $props();
 
     /**
      * Replaces the source URL of an image element with a new image once it finishes loading.
@@ -20,7 +20,9 @@
 </script>
 
 <Title>photos
-    <p slot="caption">a collection of pictures i took <br> other photos: <Link href="./photos/stage">stage photography</Link> </p>
+    {#snippet caption()}
+        <p >a collection of pictures i took <br> other photos: <Link href="./photos/stage">stage photography</Link> </p>
+    {/snippet}
 </Title>
 
 <Body width="full" flex>

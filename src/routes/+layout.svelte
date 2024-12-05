@@ -1,10 +1,19 @@
 <script>
+    import { run } from 'svelte/legacy';
+
     import NavBar from "$lib/NavBar.svelte";
     import Footer from "$lib/Footer.svelte";
     import { page } from "$app/stores";
     import "../app.css";
     import { onMount } from "svelte";
-    let isMounted = false;
+    /**
+     * @typedef {Object} Props
+     * @property {import('svelte').Snippet} [children]
+     */
+
+    /** @type {Props} */
+    let { children } = $props();
+    let isMounted = $state(false);
 
     function setTitle() {
         const firstH1 = document.querySelector("h1");
@@ -16,7 +25,9 @@
         setTitle();
     });
 
-    $: if (isMounted && $page) setTitle();
+    run(() => {
+        if (isMounted && $page) setTitle();
+    });
 </script>
 
 <svelte:head>
@@ -30,7 +41,7 @@
 <div class="flex flex-col min-h-screen">
     <NavBar />
 
-    <slot />
+    {@render children?.()}
 
     <Footer />
 </div>

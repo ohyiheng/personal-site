@@ -1,5 +1,12 @@
 <script>
-    export let left, wide;
+    let {
+        left,
+        wide,
+        children,
+        caption,
+        date,
+        tags
+    } = $props();
 </script>
 
 <header
@@ -11,28 +18,28 @@
         class:max-w-[70ch]={!wide}
     >
         <div class="flex flex-col" class:items-center={!left}>
-            <h1 class="font-display font-bold pb-3"><slot /></h1>
+            <h1 class="font-display font-bold pb-3">{@render children?.()}</h1>
             {#if left}
             <div
                 class="flex flex-col gap-5 text-sm text-gray-600 dark:text-gray-400 place-content-between justify-center"
             >
-                <slot name="caption" />
-                {#if $$slots.caption && ($$slots.date || $$slots.tags)}
+                {@render caption?.()}
+                {#if caption && (date || tags)}
                     <hr class="border-gray-250 dark:border-gray-750" />
                 {/if}
                 <div class="flex gap-3">
-                    <slot name="date" />
-                    {#if $$slots.date && $$slots.tags}
+                    {@render date?.()}
+                    {#if date && tags}
                         <span aria-hidden="true">•</span>
                     {/if}
-                    <slot name="tags" />
+                    {@render tags?.()}
                 </div>
             </div>
             {:else}
             <div
                 class="text-sm text-gray-600 dark:text-gray-400 text-center"
             >
-            <slot name="caption" />
+            {@render caption?.()}
             </div>
             {/if}
         </div>

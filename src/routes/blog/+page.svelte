@@ -5,7 +5,9 @@
 
 <Title>
     blog
-    <p slot="caption">my thoughts and experiences</p>
+    {#snippet caption()}
+        <p >my thoughts and experiences</p>
+    {/snippet}
 </Title>
 
 <Body width="wide"></Body>

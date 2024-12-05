@@ -10,14 +10,14 @@
 	"devDependencies": {
 		"@portabletext/svelte": "npm:@eirikk/portabletext-2-svelte-5@0.1.0-alpha.2",
 		"@sveltejs/adapter-auto": "^3.0.0",
-		"@sveltejs/kit": "^2.0.0",
+		"@sveltejs/kit": "^2.5.27",
 		"@sveltejs/vite-plugin-svelte": "^4.0.0",
 		"@tailwindcss/typography": "^0.5.13",
 		"autoprefixer": "^10.4.19",
 		"postcss": "^8.4.38",
 		"svelte": "^5",
 		"tailwindcss": "^3.4.3",
-		"vite": "^5.0.3"
+		"vite": "^5.4.4"
 	},
 	"type": "module",
 	"dependencies": {

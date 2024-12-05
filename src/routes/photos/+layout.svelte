@@ -3,6 +3,13 @@
     import { afterNavigate } from "$app/navigation";
     import PhotoSwipeLightbox from "photoswipe/lightbox";
     import "photoswipe/style.css";
+    /**
+     * @typedef {Object} Props
+     * @property {import('svelte').Snippet} [children]
+     */
+
+    /** @type {Props} */
+    let { children } = $props();
 
     const lightbox = new PhotoSwipeLightbox({
         gallery: "#photos-container",
@@ -59,4 +66,4 @@
     });
 </script>
 
-<slot></slot>
+{@render children?.()}

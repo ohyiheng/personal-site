@@ -1,16 +1,22 @@
 <script>
-    export let data;
     import { PortableText } from "@portabletext/svelte";
     import Link from "$lib/Link.svelte";
     import Title from "$lib/Title.svelte";
     import Body from "$lib/Body.svelte";
+    let { data } = $props();
 </script>
 
 <Title>
     now
-    <p slot="caption">what i'm currently up to</p>
-    <p slot="date">{data.nowUpdate.date}</p>
-    <p slot="tags">Something, another-thing</p>
+    {#snippet caption()}
+        <p >what i'm currently up to</p>
+    {/snippet}
+    {#snippet date()}
+        <p >{data.nowUpdate.date}</p>
+    {/snippet}
+    {#snippet tags()}
+        <p >Something, another-thing</p>
+    {/snippet}
 </Title>
 
 <Body width="normal">

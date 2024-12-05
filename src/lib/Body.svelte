@@ -1,5 +1,5 @@
 <script>
-    export let width, flex;
+    let { width, flex, children } = $props();
 </script>
 
 <div class="flex flex-col flex-grow">
@@ -12,7 +12,7 @@
         class:flex
     >
         <div class:flex-1={flex}>
-            <slot />
+            {@render children?.()}
         </div>
     </div>
 </div>

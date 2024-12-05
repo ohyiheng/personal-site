@@ -5,7 +5,9 @@
 
 <Title
     >projects
-    <p slot="caption">my personal software development projects</p>
+    {#snippet caption()}
+        <p >my personal software development projects</p>
+    {/snippet}
 </Title>
 <Body width="normal">
     <div class="flex flex-col gap-4 w-11/12 mx-auto">
