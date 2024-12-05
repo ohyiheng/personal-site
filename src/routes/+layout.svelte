@@ -1,9 +1,7 @@
 <script>
-    import { run } from 'svelte/legacy';
-
+    import { afterNavigate } from "$app/navigation";
     import NavBar from "$lib/NavBar.svelte";
     import Footer from "$lib/Footer.svelte";
-    import { page } from "$app/stores";
     import "../app.css";
     import { onMount } from "svelte";
     /**
@@ -13,20 +11,18 @@
 
     /** @type {Props} */
     let { children } = $props();
-    let isMounted = $state(false);
 
     function setTitle() {
-        const firstH1 = document.querySelector("h1");
-        if (firstH1) document.title = `${firstH1.textContent} | yhng.me`;
+        const title = document.querySelector("#title");
+        if (title) document.title = `${title.textContent} | yhng.me`;
     }
 
     onMount(() => {
-        isMounted = true;
         setTitle();
     });
 
-    run(() => {
-        if (isMounted && $page) setTitle();
+    afterNavigate(() => {
+        setTitle();
     });
 </script>
 

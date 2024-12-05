@@ -18,7 +18,7 @@
         class:max-w-[70ch]={!wide}
     >
         <div class="flex flex-col" class:items-center={!left}>
-            <h1 class="font-display font-bold pb-3">{@render children?.()}</h1>
+            <h1 class="font-display font-bold pb-3" id="title">{@render children?.()}</h1>
             {#if left}
             <div
                 class="flex flex-col gap-5 text-sm text-gray-600 dark:text-gray-400 place-content-between justify-center"
