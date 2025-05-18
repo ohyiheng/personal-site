@@ -41,3 +41,4 @@
 
     <Footer />
 </div>
+<div class="bg-gray-950 h-14 md:h-0"></div>
