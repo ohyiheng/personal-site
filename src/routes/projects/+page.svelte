@@ -1,29 +1,42 @@
 <script>
     import Title from "$lib/Title.svelte";
     import Body from "$lib/Body.svelte";
+    import Link from "../../lib/Link.svelte";
+    import ProjectItem from "../../lib/ProjectItem.svelte";
 </script>
 
 <Title
     >projects
     {#snippet caption()}
-        <p >my personal software development projects</p>
+        <p>my personal software development projects</p>
     {/snippet}
 </Title>
 <Body width="normal">
-    <div class="flex flex-col gap-4 w-11/12 mx-auto">
-        <a
-            href="https://github.com/rainmrn/gust"
-            target="_blank"
-            class="flex flex-col border border-gray-200 dark:border-gray-750 rounded cursor-pointer hover:border-secondary-500 hover:dark:border-secondary-400
-    overflow-hidden duration-150 ease-in-out"
+    <div class="p-4 flex flex-col gap-12 mx-auto">
+        <ProjectItem
+            title="Tugas: Self-hostable Todo List Web App"
+            start="Jun 2025"
+            link="https://github.com/ohyiheng/tugas"
+            tools={["Next.js", "React", "Docker", "Bash"]}
         >
-            <div class="p-6 space-y-2">
-                <strong> GUST: Get Your Songs Tagged </strong>
-                <p>
-                    A Python CLI utility to automatically tag your local
-                    music files using metadata retrieved from Spotify.
-                </p>
-            </div>
-        </a>
+            {#snippet description()}
+                Tugas is a simple todo list app heavily inspired by Todoist. A
+                demo instance is hosted <Link
+                    href="https://tugas-demo.ohyiheng.com">here</Link
+                >.
+            {/snippet}
+        </ProjectItem>
+        <ProjectItem
+            title="gust: get your songs tagged"
+            start="Jun 2024"
+            end="Jul 2025"
+            link="https://github.com/ohyiheng/gust"
+            tools={["Python"]}
+        >
+            {#snippet description()}
+                gust lets you automatically tag your local music files using
+                metadata from Spotify.
+            {/snippet}
+        </ProjectItem>
     </div>
 </Body>
