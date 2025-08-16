@@ -29,22 +29,4 @@
         <li>likes designing but is very bad at drawing</li>
         <li>enjoys solving Rubik's cubes and puzzles</li>
     </ul>
-    <h2 class="pb-2">have a look around</h2>
-    <div class="flex gap-2 flex-wrap flex-col">
-        <a
-            href="/now"
-            class="dark:bg-gray-900 border rounded px-6 py-4 dark:border-gray-750 hover:border-secondary-500 hover:dark:border-secondary-400 duration-100"
-            >🤔 what am i currently doing?</a
-        >
-        <a
-            href="/projects"
-            class="dark:bg-gray-900 border rounded px-6 py-4 dark:border-gray-750 hover:border-secondary-500 hover:dark:border-secondary-400 duration-100"
-            >✔️ projects showcase</a
-        >
-        <a
-            href="/photos"
-            class="dark:bg-gray-900 border rounded px-6 py-4 dark:border-gray-750 hover:border-secondary-500 hover:dark:border-secondary-400 duration-100"
-            >🌄 photos i have taken</a
-        >
-    </div>
 </Body>

@@ -3,7 +3,7 @@
     import LogoError from "$lib/LogoError.svelte";
     import NavButton from "$lib/NavButton.svelte";
     import { page } from "$app/stores";
-    let pages = ["about", "now", "projects", "photos"];
+    const pages = ["now", "projects", "photos"];
 
     import { onMount } from "svelte";
 
