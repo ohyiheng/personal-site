@@ -14,7 +14,7 @@
 
     function setTitle() {
         const title = document.querySelector("#title");
-        if (title) document.title = `${title.textContent} | yhng.me`;
+        if (title) document.title = `${title.textContent} | ohyiheng.com`;
     }
 
     onMount(() => {
