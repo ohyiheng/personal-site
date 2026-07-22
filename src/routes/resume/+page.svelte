@@ -33,8 +33,8 @@
         <h2 class="mb-4">Skills</h2>
         <hr class="mb-6 border-gray-500" />
         <div class="space-y-1">
-            <p><strong>Programming Languages:</strong> JavaScript, TypeScript, Java, Kotlin, Python</p>
-            <p><strong>Frameworks & Libraries:</strong> React, Next.js, Svelte, Jetpack Compose, Tailwind CSS</p>
+            <p><strong>Programming Languages:</strong> JavaScript, TypeScript, Java, Kotlin, C/C++, Python</p>
+            <p><strong>Frameworks & Libraries:</strong> React, Next.js, Svelte, Jetpack Compose</p>
             <p><strong>Other Skills:</strong> Git, Docker, Linux, AWS, SQL, HTML/CSS</p>
         </div>
         <h2 class="mb-4">Projects</h2>
