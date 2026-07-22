@@ -33,7 +33,7 @@
         </p>
     </div>
     
-    <h2>top albums i'm listening</h2>
+    <h2 class="mb-5">top albums i'm listening</h2>
     <div class="grid grid-cols-3 gap-3">
         {#each data.topAlbums as { name, url, image }}
             <a href={url} target="_blank">

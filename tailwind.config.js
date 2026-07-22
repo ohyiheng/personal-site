@@ -51,7 +51,6 @@ export default {
         900: "#131313",
         950: "#060606",
       },
-      red: colors.red,
       transparent: colors.transparent
     },
     fontFamily: {

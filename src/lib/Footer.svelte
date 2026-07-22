@@ -33,6 +33,8 @@
 </div>
 
 <style>
+    @reference "../app.css";
+
     a {
         @apply w-6 hover:text-secondary-500;
     }

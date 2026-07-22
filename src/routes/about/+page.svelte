@@ -42,7 +42,7 @@
         </p>
     </div>
     
-    <h3>technologies underneath</h3>
+    <h3 class="mb-4">technologies underneath</h3>
     
     <div class="space-y-4">
         <p>

@@ -16,7 +16,7 @@
             class="rounded-full h-10"
             oncontextmenu={preventDefault(bubble('contextmenu'))}
         />
-        <h2 class="m-0">welcome to my website</h2>
+        <h2>welcome to my website</h2>
     </div>
     <p class="pb-4">I'm a student developer based in Malaysia who:</p>
     <ul class="pl-6 space-y-2 list-disc pb-12">
